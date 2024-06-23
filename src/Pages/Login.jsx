@@ -41,7 +41,6 @@ const Login = () => {
 
                     <button className="btn btn-info text-white text-xl">Login</button>
                 </form>
-
                 <div>
                     <p className=" text-sm font-semibold">Or login with</p>
                     <div className="flex flex-row gap-2 py-2 ">
