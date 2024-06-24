@@ -50,7 +50,7 @@ const Login = () => {
                         <img className=" w-8" src={linkedinIcon} alt="" />
                     </div>
 
-                    <p className=" mt-4 font-semibold">Don't have an account? <span className="text-blue-700 hover:text-blue-900">
+                    <p className=" mt-4 font-semibold">Do not have an account? <span className="text-blue-700 hover:text-blue-900">
                         <Link>Sign Up Now!</Link></span></p>
                 </div>
             </div>
