@@ -12,6 +12,7 @@ import CreateShop from "../Pages/Dashboard/CreateShop";
 import Orders from "../Pages/Dashboard/Orders";
 import Pos from "../Pages/Dashboard/Pos";
 import WelcomePage from "../Pages/Dashboard/WelcomePage";
+import PrivateRoute from "./PrivateRoute";
 
 
 const mainRouter = createBrowserRouter([
@@ -33,7 +34,9 @@ const mainRouter = createBrowserRouter([
             },
             {
                 path:'dashboard',
-                element:<Dashboard></Dashboard>,
+                element: <PrivateRoute>
+                    <Dashboard></Dashboard>
+                </PrivateRoute> ,
                 children:[
                     {
                         path:'welcome-page',

@@ -6,11 +6,12 @@ import { useContext } from "react";
 import { AuthContext } from "../firebase/AuthProvider";
 import Swal from "sweetalert2";
 import toast from "react-hot-toast";
+import useAxiosPublic from "../Hooks/useAxiosPublic";
 
 const SignUp = () => {
 
     const { signUpWithEmailAndPassword, userUpdate } = useContext(AuthContext);
-
+    const axiosPublic = useAxiosPublic()
     const navigate = useNavigate();
 
     const handleSignUpWithEmailAndPassword = e => {
@@ -39,14 +40,31 @@ const SignUp = () => {
                             window.location.reload();
                         }, 1000);
 
-                        toast.success('Profile successfully created!')
+                        // create user entry in the database
+                        const userInfo = {
+                            name,
+                            email,
+                            image
+                        }
 
-                        // Swal.fire(
-                        //     'Profile successfully created!',
-                        //     '',
-                        //     'success'
-                        // );
-                        navigate('/dashboard');
+                        axiosPublic.post('/users', userInfo)
+                            .then(res => {
+                                if (res.data.insertedId) {
+                                    console.log('user added to the database');
+
+                                    toast.success('Profile successfully created!')
+
+                                    // Swal.fire(
+                                    //     'Profile successfully created!',
+                                    //     '',
+                                    //     'success'
+                                    // );
+                                    navigate('/dashboard');
+
+                                }
+                            })
+
+
 
                     })
             })
