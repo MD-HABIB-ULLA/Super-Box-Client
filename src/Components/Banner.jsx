@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const Banner = () => {
@@ -8,7 +9,7 @@ const Banner = () => {
                 <div className="max-w-[70%] mr-auto">
                     <h1 className="text-5xl font-bold">Super Box</h1>
                     <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                    <button className=" border-2 py-2 px-5 rounded-3xl text-lg font-semibold bg-blue-600 text-white hover:bg-blue-700">Create Now!</button>
+                    <button className=" border-2 py-2 px-5 rounded-3xl text-lg font-semibold bg-blue-600 text-white hover:bg-blue-700"><Link to={"/sign-up"}>Create Now!</Link></button>
                 </div>
             </div>
         </div>
