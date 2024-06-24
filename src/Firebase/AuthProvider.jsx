@@ -1,6 +1,7 @@
 import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { auth } from "./firebase.config";
 import { createContext, useEffect, useState } from "react";
+// import useAxiosPublic from "../Hooks/useAxiosPublic";
 
 export const AuthContext = createContext(null);
 
@@ -10,6 +11,7 @@ const AuthProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
     const googleProvider = new GoogleAuthProvider();
 
+    // const axiosPublic = useAxiosPublic();
 
     // Google login
     const googleLogin = () => {
@@ -47,7 +49,6 @@ const AuthProvider = ({ children }) => {
             }
     
         },[]);
-
 
         // User updating
         const userUpdate = (name, image) => {
