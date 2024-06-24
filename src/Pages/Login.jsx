@@ -1,9 +1,72 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import facebookIcon from '../assets/facebook_2111398.png';
 import instagramIcon from '../assets/instagram_2111463.png';
 import linkedinIcon from '../assets/linkedin_3992606.png';
+import { useContext } from "react";
+import { AuthContext } from "../firebase/AuthProvider";
+import Swal from "sweetalert2";
+import toast from "react-hot-toast";
 
 const Login = () => {
+    const { googleLogin, loginWithEmailAndPassword, user } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+
+
+    const handleLoginWithEmailAndPassword = e => {
+        e.preventDefault();
+
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+
+        console.log(email, password);
+
+        loginWithEmailAndPassword(email, password)
+            .then(result => {
+
+                // Swal.fire(
+                //     'Logged Successfully!',
+                //     '',
+                //     'success'
+                // )
+                toast.success('Logged Successfully!')
+                navigate(location?.state ? location.state : '/dashboard')
+            })
+            .catch(err => {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Sorry!',
+                    text: err.message,
+
+                })
+                // toast.error(`Sorry! ${err.message}`)
+                console.log(err)
+            })
+    }
+
+    const handleGoogleLogin = () => {
+        googleLogin()
+            .then(result => {
+                console.log(result);
+                Swal.fire(
+                    'Logged Successfully!',
+                    '',
+                    'success'
+                );
+                navigate(location?.state ? location.state : '/dashboard')
+            })
+            .catch(err => {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Sorry!',
+                    text: err.message,
+
+                })
+                console.log(err)
+            })
+
+    };
+
     return (
         <div className="min-h-screen  w-full flex flex-row">
             <div className="flex-auto w-1/2 p-5 bg-gray-200">
@@ -14,17 +77,23 @@ const Login = () => {
                 <p className="text-xl font-semibold">Login to your account</p>
                 <p className="text-gray-600 font-light max-w-[70%]">Inter your name, valid email address and password to register your account</p>
 
-                <form action=""
+                <form onSubmit={handleLoginWithEmailAndPassword}
                     className="flex flex-col gap-5 py-8">
 
                     <label className="input input-bordered flex items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 opacity-70"><path d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" /><path d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" /></svg>
-                        <input type="text" className="grow" placeholder="Email" />
+                        <input type="text" 
+                        name="email"
+                        className="grow" placeholder="Email"
+                        required />
                     </label>
 
                     <label className="input input-bordered flex items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 opacity-70"><path fillRule="evenodd" d="M14 6a4 4 0 0 1-4.899 3.899l-1.955 1.955a.5.5 0 0 1-.353.146H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.293a.5.5 0 0 1 .146-.353l3.955-3.955A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z" clipRule="evenodd" /></svg>
-                        <input type="password" className="grow"
+                        <input type="password"
+                        name="password"
+                        required
+                         className="grow"
                             placeholder="password" />
                     </label>
 
@@ -39,19 +108,19 @@ const Login = () => {
                         </div>
                     </div>
 
-                    <button className="btn btn-info text-white text-xl">Login</button>
+                    <button type="submit" className="btn btn-info text-white text-xl">Login</button>
                 </form>
                 <div>
                     <p className=" text-sm font-semibold">Or login with</p>
                     <div className="flex flex-row gap-2 py-2 ">
-                        <img className=" w-8" src="https://i.ibb.co/74JTkrp/google-13170545.png" alt="" />
+                        <img onClick={handleGoogleLogin}  className=" w-8" src="https://i.ibb.co/74JTkrp/google-13170545.png" alt="" />
                         <img className=" w-8" src={facebookIcon} alt="" />
                         <img className=" w-8" src={instagramIcon} alt="" />
                         <img className=" w-8" src={linkedinIcon} alt="" />
                     </div>
 
                     <p className=" mt-4 font-semibold">Do not have an account? <span className="text-blue-700 hover:text-blue-900">
-                        <Link>Sign Up Now!</Link></span></p>
+                        <Link to={'/sign-up'}>Sign Up Now!</Link></span></p>
                 </div>
             </div>
         </div>

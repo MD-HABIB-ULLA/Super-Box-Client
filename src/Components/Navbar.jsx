@@ -1,9 +1,38 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { AuthContext } from "../firebase/AuthProvider";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const navigate = useNavigate();
+
+  const handleLogOut = () => {
+    logOut()
+        .then(result => {
+            console.log(result);
+            Swal.fire(
+                'Logout Successfully!',
+                '',
+                'success'
+              )
+            
+            navigate('/login')
+        })
+        .catch(err => {
+            Swal.fire({
+                icon: 'error',
+                title: 'Sorry!',
+                text: err.message,
+              
+              })
+            console.log(err)
+        })
+}
   return (
     <div className=" bg-blue-200 ">
-      <div className="navbar container mx-auto">
+      <div className="navbar max-w-full px-5 border ">
         <div className="navbar-start">
           {/* <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -71,7 +100,38 @@ const Navbar = () => {
         </ul>
       </div> */}
         <div className="navbar-end">
-          <Link className=" text-blue-700 text-xl font-semibold">Register Here!</Link>
+            {
+              user?.email ?
+              <div className="text-center">
+
+                  <div className="dropdown dropdown-bottom dropdown-end">
+                      <label tabIndex={0} className="avatar w-16">
+
+                          <div className=" w-16 rounded-full">
+                              <img src={user.photoURL} />
+                          </div>
+
+
+                      </label>
+                      <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-fit">
+                          <li> <p className=" text-center">{user.displayName}</p></li>
+                          <li><p className="">{user.email}</p></li>
+                          <li><button onClick={handleLogOut} className="btn text-lg font-semibold  text-slate-600">
+                              <NavLink
+                                  to="/login"
+                                  className={({ isActive, isPending }) =>
+                                      isPending ? "pending" : isActive ? "  text-orange-500 font-bold" : ""
+                                  }
+                              >
+                                  Logout
+                              </NavLink>
+                          </button></li>
+                      </ul>
+                  </div>
+
+              </div>
+              : <Link to={'/login'} className=" text-blue-700 text-xl font-semibold">Log in</Link>
+            } 
         </div>
       </div>
     </div>

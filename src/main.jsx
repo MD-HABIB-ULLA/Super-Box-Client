@@ -5,11 +5,15 @@ import {
 } from "react-router-dom";
 import "./index.css";
 import mainRouter from './Routers/mainRouter';
+import AuthProvider from './firebase/AuthProvider';
 
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={mainRouter} />
+    <AuthProvider>
+      <RouterProvider router={mainRouter} />
+    </AuthProvider>
+
   </React.StrictMode>
 )
