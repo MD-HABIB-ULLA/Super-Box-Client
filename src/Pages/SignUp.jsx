@@ -36,9 +36,9 @@ const SignUp = () => {
             .then(res => {
                 userUpdate(name, image)
                     .then(() => {
-                        // setTimeout(() => {
-                        //     window.location.reload();
-                        // }, 1000);
+                        setTimeout(() => {
+                            window.location.reload();
+                        }, 1000);
 
                         // create user entry in the database
                         const userInfo = {
@@ -59,7 +59,7 @@ const SignUp = () => {
                                     //     '',
                                     //     'success'
                                     // );
-                                    // navigate('/dashboard');
+                                    navigate('/dashboard');
 
                                 }
                             })
