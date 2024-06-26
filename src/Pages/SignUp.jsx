@@ -33,6 +33,7 @@ const SignUp = () => {
         }
 
         signUpWithEmailAndPassword(email, password)
+            // eslint-disable-next-line no-unused-vars
             .then(res => {
                 userUpdate(name, image)
                     .then(() => {

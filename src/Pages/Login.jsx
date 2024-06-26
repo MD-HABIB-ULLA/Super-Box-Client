@@ -8,7 +8,7 @@ import Swal from "sweetalert2";
 import toast from "react-hot-toast";
 
 const Login = () => {
-    const { googleLogin, loginWithEmailAndPassword, user } = useContext(AuthContext);
+    const { googleLogin, loginWithEmailAndPassword } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -22,6 +22,7 @@ const Login = () => {
         console.log(email, password);
 
         loginWithEmailAndPassword(email, password)
+            // eslint-disable-next-line no-unused-vars
             .then(result => {
 
                 // Swal.fire(

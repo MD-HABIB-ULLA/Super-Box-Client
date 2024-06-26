@@ -1,5 +1,6 @@
 import AboutUs from "../Components/AboutUs";
 import Banner from "../Components/Banner";
+import ContactForm from "../Components/ContactForm";
 import ContactUs from "../Components/ContactUs";
 import FollowUs from "../Components/FollowUs";
 import Footer from "../Components/Footer";
@@ -14,6 +15,7 @@ const LandingPage = () => {
             <Services></Services>
             <AboutUs></AboutUs>
             <ContactUs></ContactUs>
+            <ContactForm></ContactForm>
             <FollowUs></FollowUs>
             <Footer></Footer>
         </div>

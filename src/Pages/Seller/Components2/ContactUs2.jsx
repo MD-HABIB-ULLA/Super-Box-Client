@@ -1,12 +1,14 @@
-import Title from "./Title";
-import { FcHome } from "react-icons/fc";
 import { PiPhoneCallDuotone } from "react-icons/pi";
 import { BiMailSend } from "react-icons/bi";
+import { FcHome } from "react-icons/fc";
+import Title from "../../../Components/Title";
 
-const ContactUs = () => {
+
+
+const ContactUs2 = () => {
     return (
-        <div>
-            <Title title1='any queries?' title2={'contact with us'}></Title>
+        <div className="mt-10">
+                       <Title title1='any queries?' title2={'contact with us'}></Title>
             <p className="text-center max-w-[35%] mx-auto text-xs text-gray-600 font-light">We always want to hear from you! Let us know how we can best help you and we'll do our very best.</p>
 
             <div className="container mx-auto flex flex-row px-10 py-10 divide-x-4 ">
@@ -40,9 +42,8 @@ const ContactUs = () => {
 
             </div>
 
-           
         </div>
     );
 };
 
-export default ContactUs;
+export default ContactUs2;

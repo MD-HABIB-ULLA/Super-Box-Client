@@ -22,7 +22,7 @@ const Dashboard = () => {
                                 <li>
                                     <NavLink to="/dashboard/create-shop" className={`p-2 text-lg rounded-sm`}>
                                         <MdAddBusiness className="text-3xl" />
-                                        Create a shop</NavLink>
+                                        Create a website</NavLink>
                                 </li>
                                 <li>
                                     <NavLink to="/dashboard/add-product" className={`p-2 text-lg rounded-sm`}>
