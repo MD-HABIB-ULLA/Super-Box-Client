@@ -94,6 +94,19 @@ const Navbar2 = () => {
               }}>
               Edit Website</NavLink>
         </li>
+        <li>
+            <NavLink to="/dashboard/welcome-page" className={`p-1 text-lg `}
+             style={({ isActive }) => {
+                return {
+                  fontWeight: isActive ? "bold" : "",
+                  color: isActive ? "blue" : "black",
+                  backgroundColor: "transparent",
+                  textDecoration: isActive ?"underline":"none",
+
+                };
+              }}>
+              Dashboard</NavLink>
+        </li>
 
     </>
 
