@@ -3,7 +3,7 @@ import facebookIcon from '../assets/facebook_2111398.png';
 import instagramIcon from '../assets/instagram_2111463.png';
 import linkedinIcon from '../assets/linkedin_3992606.png';
 import { useContext } from "react";
-import { AuthContext } from "../firebase/AuthProvider";
+import { AuthContext } from "../Firebase/AuthProvider";
 import Swal from "sweetalert2";
 import toast from "react-hot-toast";
 
@@ -30,7 +30,7 @@ const Login = () => {
                 //     'success'
                 // )
                 toast.success('Logged Successfully!')
-                navigate(location?.state ? location.state : '/dashboard')
+                navigate(location?.state ? location.state : '/dashboard/welcome-page')
             })
             .catch(err => {
                 Swal.fire({
@@ -53,7 +53,7 @@ const Login = () => {
                     '',
                     'success'
                 );
-                navigate(location?.state ? location.state : '/dashboard')
+                navigate(location?.state ? location.state : '/dashboard/welcome-page')
             })
             .catch(err => {
                 Swal.fire({

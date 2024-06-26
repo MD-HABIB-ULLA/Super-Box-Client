@@ -3,7 +3,7 @@ import facebookIcon from '../assets/facebook_2111398.png';
 import instagramIcon from '../assets/instagram_2111463.png';
 import linkedinIcon from '../assets/linkedin_3992606.png';
 import { useContext } from "react";
-import { AuthContext } from "../firebase/AuthProvider";
+import { AuthContext } from "../Firebase/AuthProvider";
 import Swal from "sweetalert2";
 import toast from "react-hot-toast";
 import useAxiosPublic from "../Hooks/useAxiosPublic";
@@ -59,7 +59,7 @@ const SignUp = () => {
                                     //     '',
                                     //     'success'
                                     // );
-                                    navigate('/dashboard');
+                                    navigate('/dashboard/welcome-page');
 
                                 }
                             })
