@@ -5,7 +5,7 @@ import {
 } from "react-router-dom";
 import "./index.css";
 import mainRouter from './Routers/mainRouter';
-import AuthProvider from './firebase/AuthProvider';
+import AuthProvider from './Firebase/AuthProvider';
 
 
 

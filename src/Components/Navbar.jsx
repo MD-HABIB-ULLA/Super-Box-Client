@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { AuthContext } from "../firebase/AuthProvider";
+import { AuthContext } from "../Firebase/AuthProvider";
 import Swal from "sweetalert2";
 
 const Navbar = () => {
