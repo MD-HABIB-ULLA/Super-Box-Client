@@ -1,4 +1,4 @@
-import { MdAddCircle } from "react-icons/md";
+
 import { Link, NavLink, Outlet } from "react-router-dom";
 import { MdAddBusiness } from "react-icons/md";
 import { TbLogs } from "react-icons/tb";
@@ -7,6 +7,7 @@ import { ImBoxAdd } from "react-icons/im";
 import { HiChatBubbleLeftRight } from "react-icons/hi2";
 import { GrResources } from "react-icons/gr";
 import Navbar from "../../Components/Navbar";
+import { AiOutlineProduct } from "react-icons/ai";
 const Dashboard = () => {
     return (
         <div className="">
@@ -25,9 +26,9 @@ const Dashboard = () => {
                                         Create a website</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/dashboard/add-product" className={`p-2 text-lg rounded-sm`}>
-                                        <MdAddCircle  className="text-3xl"/>
-                                        Add Product</NavLink>
+                                    <NavLink to="/dashboard/product-management" className={`p-2 text-lg rounded-sm`}>
+                                        <AiOutlineProduct className="text-3xl"/>
+                                        Product Management</NavLink>
                                 </li>
                                 <li>
                                     <NavLink to="/dashboard/blogs" className={`p-2 text-lg rounded-sm`}>
@@ -41,12 +42,7 @@ const Dashboard = () => {
                                         POS
                                     </NavLink>
                                 </li>
-                                <li>
-                                    <NavLink to="/dashboard/orders" className={`p-2 text-lg rounded-sm`}>
-                                        <ImBoxAdd className="text-3xl"/>
-                                        Orders
-                                    </NavLink>
-                                </li>
+                             
                                 <li>
                                     <NavLink to="/dashboard/chat-us" className={`p-2 text-lg rounded-sm`}>
                                         <HiChatBubbleLeftRight className="text-3xl"/>
