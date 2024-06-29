@@ -77,12 +77,12 @@ const CreateShop = () => {
 
     return (
 
-        <div className="my-20">
+        <div className="my-10">
             <Title title1={'BY YOUR PREFERENCE'} title2={'CREATE SHOP'}></Title>
             <form onSubmit={handleSubmit(onSubmit)} className=" p-5 rounded-lg ">
 
                 {/* Shops Information */}
-                <h1 className="text-3xl">Shops Information:</h1>
+                <h1 className="text-3xl mt-10">Shops Information:</h1>
 
                 <div className="grid grid-cols-3 gap-4 border-b-2 border-dashed pb-10 mb-10">
                     {/*Brand Name */}
@@ -316,7 +316,7 @@ const CreateShop = () => {
                             <span className="label-text text-lg">Facebook</span>
 
                         </label>
-                        <input type="text" placeholder="Enter Tripe Tile"
+                        <input type="url" placeholder="Enter Tripe Tile"
                             {...register('facebookUrl', { required: true })}
                             className="input input-bordered  " />
 
@@ -327,7 +327,7 @@ const CreateShop = () => {
                             <span className="label-text text-lg">Instagram</span>
 
                         </label>
-                        <input type="text" placeholder="Enter Tripe Tile"
+                        <input type="url" placeholder="Enter Tripe Tile"
                             {...register('instagramUrl', { required: true })}
                             className="input input-bordered  " />
 
@@ -338,7 +338,7 @@ const CreateShop = () => {
                             <span className="label-text text-lg">Linkedin</span>
 
                         </label>
-                        <input type="text" placeholder="Enter Tripe Tile"
+                        <input type="url" placeholder="Enter Tripe Tile"
                             {...register('linkedinUrl', { required: true })}
                             className="input input-bordered " />
 
@@ -349,7 +349,7 @@ const CreateShop = () => {
                             <span className="label-text text-lg">Twitter</span>
 
                         </label>
-                        <input type="text" placeholder="Enter Tripe Tile"
+                        <input type="url" placeholder="Enter Tripe Tile"
                             {...register('twitterUrl', { required: true })}
                             className="input input-bordered  " />
 
@@ -360,7 +360,7 @@ const CreateShop = () => {
                             <span className="label-text text-lg">YouTube</span>
 
                         </label>
-                        <input type="text" placeholder="Enter Tripe Tile"
+                        <input type="url" placeholder="Enter Tripe Tile"
                             {...register('youtubeUrl', { required: true })}
                             className="input input-bordered   " />
 

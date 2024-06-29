@@ -11,7 +11,7 @@ const Navbar = () => {
   const handleLogOut = () => {
     logOut()
         .then(result => {
-            console.log(result);
+            // console.log(result);
             Swal.fire(
                 'Logout Successfully!',
                 '',

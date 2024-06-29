@@ -21,6 +21,8 @@ import Orders2 from "../Pages/Seller/Pages/Orders2";
 import Reviews2 from "../Pages/Seller/Pages/Reviews2";
 import LandingPage2 from "../Pages/Seller/Pages/LandingPage2";
 import EditWebsite from "../Pages/Seller/Pages/EditWebsite";
+import ProductManagement from "../Pages/Dashboard/ProductManagement";
+import UpdateProduct from "../Pages/Dashboard/UpdateProduct";
 
 
 const mainRouter = createBrowserRouter([
@@ -50,10 +52,7 @@ const mainRouter = createBrowserRouter([
                         path:'welcome-page',
                         element: <WelcomePage></WelcomePage>
                     },
-                    {
-                        path:'add-product',
-                        element: <AddProduct></AddProduct>
-                    },
+                    
                     {
                         path:'blogs',
                         element: <Blogs></Blogs>
@@ -73,7 +72,19 @@ const mainRouter = createBrowserRouter([
                     {
                         path:'pos',
                         element: <Pos></Pos>
-                    }
+                    },
+                    {
+                        path:'product-management',
+                        element: <ProductManagement></ProductManagement>
+                    },
+                    {
+                        path:'update-product',
+                        element: <UpdateProduct></UpdateProduct>
+                    },
+                    {
+                        path:'add-product',
+                        element: <AddProduct></AddProduct>
+                    },
                 ]
             }
         ]
