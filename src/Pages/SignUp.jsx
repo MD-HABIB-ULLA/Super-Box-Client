@@ -13,7 +13,7 @@ const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_ke
 const SignUp = () => {
     const { register, handleSubmit, reset } = useForm();
 
-    const { signUpWithEmailAndPassword, userUpdate, user } = useContext(AuthContext);
+    const { signUpWithEmailAndPassword, userUpdate} = useContext(AuthContext);
     const axiosPublic = useAxiosPublic()
     const navigate = useNavigate();
 
@@ -59,6 +59,7 @@ const SignUp = () => {
             signUpWithEmailAndPassword(data.email, data.password)
                 // eslint-disable-next-line no-unused-vars
                
+                // eslint-disable-next-line no-unused-vars
                 .then(res => {
                     userUpdate(data.name, image)
                         .then(() => {
@@ -213,18 +214,6 @@ const SignUp = () => {
                             placeholder="Enter your password" className="grow" />
 
                     </label>
-
-
-
-
-                    {/* <label className="input input-bordered flex items-center gap-2">
-                       
-
-                        <input type="password" className="grow"
-                            name="password" required
-                            placeholder="Enter your password" />
-
-                    </label> */}
                     <p className="text-sm -mt-4 text-gray-400 font-semibold">Minimum 8 characters long and containing at least one numeric, uppercase, lowercase, and special character.</p>
 
                     <div className="form-control flex flex-row gap-2">

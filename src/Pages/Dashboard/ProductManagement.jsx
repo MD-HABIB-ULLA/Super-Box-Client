@@ -53,12 +53,13 @@ const ProductManagement = () => {
             <div className="overflow-x-auto mt-5">
                 <table className="table border-2 ">
                     {/* head */}
-                    <thead>
+                    <thead className="text-xl">
                         <tr>
                             <th></th>
                             <th>Product Name</th>
                             <th>Type</th>
                             <th>Price</th>
+                            <th>Quantity</th>
                             <th>Update</th>
                             <th>Delete</th>
                         </tr>
@@ -70,6 +71,7 @@ const ProductManagement = () => {
                             <td>Cy Ganderton</td>
                             <td>Quality Control Specialist</td>
                             <td>Blue</td>
+                            <td className=""><input type="number"  name="productQuantity" defaultValue='2' className="w-10 input-bordered" /></td>
                             <td><Link to={'/dashboard/update-product'}>
                                 <GrUpdate />
                             </Link></td>
@@ -84,6 +86,7 @@ const ProductManagement = () => {
                             <td>Hart Hagerty</td>
                             <td>Desktop Support Technician</td>
                             <td>Purple</td>
+                            <td className=""><input type="number"  name="productQuantity" defaultValue='2' className="w-10 input-bordered" /></td>
                             <td><Link to={'/dashboard/update-product'}>
                                 <GrUpdate />
                             </Link></td>
@@ -97,6 +100,7 @@ const ProductManagement = () => {
                             <td>Brice Swyre</td>
                             <td>Tax Accountant</td>
                             <td>Red</td>
+                            <td className=""><input type="number"  name="productQuantity" defaultValue='2' className="w-10 input-bordered" /></td>
                             <td><Link to={'/dashboard/update-product'}>
                                 <GrUpdate />
                             </Link></td>
@@ -110,6 +114,7 @@ const ProductManagement = () => {
                             <td>Brice Swyre</td>
                             <td>Tax Accountant</td>
                             <td>Red</td>
+                            <td className=""><input type="number"  name="productQuantity" defaultValue='2' className="w-10 input-bordered" /></td>
                             <td><Link to={'/dashboard/update-product'}>
                                 <GrUpdate />
                             </Link></td>
