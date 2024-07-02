@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Title from "../../Components/Title";
 
 
@@ -21,7 +22,7 @@ const SellerPanel = () => {
                 </svg>
             </label>
             <div className="overflow-x-auto mt-5">
-                <table className="table table-sm ">
+                <table className="table table-xs ">
                     <thead>
                         <tr>
                             
@@ -30,8 +31,11 @@ const SellerPanel = () => {
                             <th>Brand Name</th>
                             <th>location</th>
                             <th>Contact Info</th>
+                            <th>Status</th>
                             <th>Total Product</th>
                             <th>Last Login</th>
+                          
+                            <th>Details</th>  
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -43,8 +47,13 @@ const SellerPanel = () => {
                             <td>Littel, Schaden and Vandervort</td>
                             <td>Canada</td>
                             <td>Blue</td>
+                            <td>Active</td>
                             <td>12/16/2020</td>
-                            <td className="flex flex-row justify-start gap-1">
+                            
+                            <td><Link className="text-blue-600 text-base underline">Show</Link>
+                            </td>
+
+                            <td className=" flex flex-row items-center justify-center p-1 gap-1">
                                 <button className="btn btn-outline btn-info  btn-xs ">Remove</button>
                                 <button className="btn btn-outline btn-error  btn-xs ">Ban</button>
                                 <button className="btn btn-outline btn-warning btn-xs " >Suspend</button>
@@ -58,7 +67,11 @@ const SellerPanel = () => {
                             <td>United States</td>
                             <td>12/5/2020</td>
                             <td>Purple</td>
-                            <td className="flex flex-row justify-start gap-1">
+                            <td>Active</td>
+                            <td><Link className="text-blue-600 text-base underline">Show</Link>
+                            </td>
+
+                            <td className=" flex flex-row items-center justify-center p-1 gap-1">
                                 <button className="btn btn-outline btn-info  btn-xs ">Remove</button>
                                 <button className="btn btn-outline btn-error  btn-xs ">Ban</button>
                                 <button className="btn btn-outline btn-warning btn-xs " >Suspend</button>
@@ -72,7 +85,11 @@ const SellerPanel = () => {
                             <td>China</td>
                             <td>8/15/2020</td>
                             <td>Red</td>
-                            <td className="flex flex-row justify-start gap-1">
+                            <td>Active</td>
+                            <td><Link className="text-blue-600 text-base underline">Show</Link>
+                            </td>
+
+                            <td className=" flex flex-row items-center justify-center p-1 gap-1">
                                 <button className="btn btn-outline btn-info  btn-xs ">Remove</button>
                                 <button className="btn btn-outline btn-error  btn-xs ">Ban</button>
                                 <button className="btn btn-outline btn-warning btn-xs " >Suspend</button>
@@ -86,7 +103,11 @@ const SellerPanel = () => {
                             <td>Russia</td>
                             <td>3/25/2021</td>
                             <td>Crimson</td>
-                            <td className="flex flex-row justify-start gap-1">
+                            <td>Active</td>
+                            <td><Link className="text-blue-600 text-base underline">Show</Link>
+                            </td>
+
+                            <td className=" flex flex-row items-center justify-center p-1 gap-1">
                                 <button className="btn btn-outline btn-info  btn-xs ">Remove</button>
                                 <button className="btn btn-outline btn-error  btn-xs ">Ban</button>
                                 <button className="btn btn-outline btn-warning btn-xs " >Suspend</button>
@@ -100,7 +121,11 @@ const SellerPanel = () => {
                             <td>Brazil</td>
                             <td>5/22/2020</td>
                             <td>Indigo</td>
-                            <td className="flex flex-row justify-start gap-1">
+                            <td>Active</td>
+                            <td><Link className="text-blue-600 text-base underline">Show</Link>
+                            </td>
+
+                            <td className=" flex flex-row items-center justify-center p-1 gap-1">
                                 <button className="btn btn-outline btn-info  btn-xs ">Remove</button>
                                 <button className="btn btn-outline btn-error  btn-xs ">Ban</button>
                                 <button className="btn btn-outline btn-warning btn-xs " >Suspend</button>
@@ -114,7 +139,11 @@ const SellerPanel = () => {
                             <td>Venezuela</td>
                             <td>12/8/2020</td>
                             <td>Purple</td>
-                            <td className="flex flex-row justify-start gap-1">
+                            <td>Active</td>
+                            <td><Link className="text-blue-600 text-base underline">Show</Link>
+                            </td>
+
+                            <td className=" flex flex-row items-center justify-center p-1 gap-1">
                                 <button className="btn btn-outline btn-info  btn-xs ">Remove</button>
                                 <button className="btn btn-outline btn-error  btn-xs ">Ban</button>
                                 <button className="btn btn-outline btn-warning btn-xs " >Suspend</button>
@@ -128,7 +157,11 @@ const SellerPanel = () => {
                             <td>Philippines</td>
                             <td>2/17/2021</td>
                             <td>Yellow</td>
-                            <td className="flex flex-row justify-start gap-1">
+                            <td>Active</td>
+                            <td><Link className="text-blue-600 text-base underline">Show</Link>
+                            </td>
+
+                            <td className=" flex flex-row items-center justify-center p-1 gap-1">
                                 <button className="btn btn-outline btn-info  btn-xs ">Remove</button>
                                 <button className="btn btn-outline btn-error  btn-xs ">Ban</button>
                                 <button className="btn btn-outline btn-warning btn-xs " >Suspend</button>
@@ -142,7 +175,11 @@ const SellerPanel = () => {
                             <td>Indonesia</td>
                             <td>5/23/2020</td>
                             <td>Crimson</td>
-                            <td className="flex flex-row justify-start gap-1">
+                            <td>Active</td>
+                            <td><Link className="text-blue-600 text-base underline">Show</Link>
+                            </td>
+
+                            <td className=" flex flex-row items-center justify-center p-1 gap-1">
                                 <button className="btn btn-outline btn-info  btn-xs ">Remove</button>
                                 <button className="btn btn-outline btn-error  btn-xs ">Ban</button>
                                 <button className="btn btn-outline btn-warning btn-xs " >Suspend</button>
@@ -156,7 +193,11 @@ const SellerPanel = () => {
                             <td>Philippines</td>
                             <td>2/21/2021</td>
                             <td>Maroon</td>
-                            <td className="flex flex-row justify-start gap-1">
+                            <td>Active</td>
+                            <td><Link className="text-blue-600 text-base underline">Show</Link>
+                            </td>
+
+                            <td className=" flex flex-row items-center justify-center p-1 gap-1">
                                 <button className="btn btn-outline btn-info  btn-xs ">Remove</button>
                                 <button className="btn btn-outline btn-error  btn-xs ">Ban</button>
                                 <button className="btn btn-outline btn-warning btn-xs " >Suspend</button>
@@ -168,9 +209,14 @@ const SellerPanel = () => {
                             <td>VP Marketing</td>
                             <td>Sauer LLC</td>
                             <td>Chad</td>
-                            <td>6/23/2020</td>
+                            
                             <td>Green</td>
-                            <td className="flex flex-row justify-start gap-1">
+                            <td>6/23/2020</td>
+                            <td>Active</td>
+                            <td><Link className="text-blue-600 text-base underline">Show</Link>
+                            </td>
+
+                            <td className=" flex flex-row items-center justify-center p-1 gap-1">
                                 <button className="btn btn-outline btn-info  btn-xs ">Remove</button>
                                 <button className="btn btn-outline btn-error  btn-xs ">Ban</button>
                                 <button className="btn btn-outline btn-warning btn-xs " >Suspend</button>
