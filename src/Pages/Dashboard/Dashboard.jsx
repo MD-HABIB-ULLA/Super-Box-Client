@@ -56,8 +56,8 @@ const Dashboard = () => {
                     <HiUserGroup className="text-3xl" />
                     All Users</NavLink></summary>
                 <ul className="text-lg">
-                    <li><Link to={'/dashboard/seller-panel'}>Seller Panel</Link></li>
-                    <li><Link to={'/dashboard/customer-panel'}>Customer Panel</Link></li>
+                    <li><NavLink to={'/dashboard/seller-panel'}>Seller Panel</NavLink></li>
+                    <li><NavLink to={'/dashboard/customer-panel'}>Customer Panel</NavLink></li>
                 </ul>
             </details>
         </li>
@@ -88,7 +88,7 @@ const Dashboard = () => {
         <li>
             <NavLink to="/dashboard/bm-resources" className={`p-2 text-lg rounded-sm`}>
                 <GrResources className="text-3xl" />
-                Issues And Reports
+                Reports And Issues 
             </NavLink>
         </li>
 
