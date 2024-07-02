@@ -62,7 +62,7 @@ const Dashboard = () => {
             </details>
         </li>
         <li>
-            <NavLink to="/dashboard/product-management" className={`p-2 text-lg rounded-sm`}>
+            <NavLink to="/dashboard/all-products" className={`p-2 text-lg rounded-sm`}>
                 <AiOutlineProduct className="text-3xl" />
                 All Products</NavLink>
         </li>
@@ -80,7 +80,7 @@ const Dashboard = () => {
         </li>
 
         <li>
-            <NavLink to="/dashboard/chat-us" className={`p-2 text-lg rounded-sm`}>
+            <NavLink to="/dashboard/seller-request" className={`p-2 text-lg rounded-sm`}>
                 <FaRegQuestionCircle className="text-3xl" />
                 Seller Request
             </NavLink>
