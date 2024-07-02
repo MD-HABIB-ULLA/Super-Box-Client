@@ -24,7 +24,8 @@ const SellerPanel = () => {
                 <table className="table table-sm ">
                     <thead>
                         <tr>
-                            <th></th>
+                            
+                            <th>Seller ID</th>
                             <th>Name</th>
                             <th>Brand Name</th>
                             <th>location</th>

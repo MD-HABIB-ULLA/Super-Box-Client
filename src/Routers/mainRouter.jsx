@@ -25,6 +25,8 @@ import ProductManagement from "../Pages/Dashboard/ProductManagement";
 import UpdateProduct from "../Pages/Dashboard/UpdateProduct";
 import SellerPanel from "../Pages/Admin/SellerPanel";
 import CustomerPanel from "../Pages/Admin/CustomerPanel";
+import AllProduct from "../Pages/Admin/AllProduct";
+import SellerRequests from "../Pages/Admin/SellerRequests";
 
 
 const mainRouter = createBrowserRouter([
@@ -87,6 +89,7 @@ const mainRouter = createBrowserRouter([
                         path:'add-product',
                         element: <AddProduct></AddProduct>
                     },
+                    // Admin Routes
                     {
                         path:'seller-panel',
                         element: <SellerPanel></SellerPanel>
@@ -94,6 +97,14 @@ const mainRouter = createBrowserRouter([
                     {
                         path:'customer-panel',
                         element: <CustomerPanel></CustomerPanel>
+                    },
+                    {
+                        path:'all-products',
+                        element: <AllProduct></AllProduct>
+                    },
+                    {
+                        path:'seller-request',
+                        element: <SellerRequests></SellerRequests>
                     },
                 ]
             }

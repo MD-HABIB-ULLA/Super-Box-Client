@@ -28,7 +28,7 @@ const CustomerPanel = () => {
                     {/* head */}
                     <thead>
                         <tr>
-                            <th></th>
+                            <th>Customer ID</th>
                             <th>Name</th>
                             <th>Registrar</th>
                             <th>Address</th>
