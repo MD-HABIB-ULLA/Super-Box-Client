@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-undef */
 
 import { GrUpdate } from "react-icons/gr";
 import { RiDeleteBinFill } from "react-icons/ri";
@@ -7,6 +8,7 @@ import { MdAddCircle } from "react-icons/md";
 import Swal from "sweetalert2";
 
 const ProductManagement = () => {
+    const currentDate = new Date().toLocaleDateString();
     const handleDelete = (id) => {
         console.log(id);
         const swalWithBootstrapButtons = Swal.mixin({
@@ -62,6 +64,7 @@ const ProductManagement = () => {
                             <th>Quantity</th>
                             <th>Update</th>
                             <th>Delete</th>
+                            <th>Last Updated</th>
                         </tr>
                     </thead>
                     <tbody className="text-lg">
@@ -77,6 +80,9 @@ const ProductManagement = () => {
                             </Link></td>
                             <td className="text-2xl">
                                 <button onClick={handleDelete}><RiDeleteBinFill /></button>
+                            </td>
+                            <td>
+                               {currentDate}
                             </td>
 
                         </tr>

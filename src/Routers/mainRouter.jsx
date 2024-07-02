@@ -23,6 +23,8 @@ import LandingPage2 from "../Pages/Seller/Pages/LandingPage2";
 import EditWebsite from "../Pages/Seller/Pages/EditWebsite";
 import ProductManagement from "../Pages/Dashboard/ProductManagement";
 import UpdateProduct from "../Pages/Dashboard/UpdateProduct";
+import SellerPanel from "../Pages/Admin/SellerPanel";
+import CustomerPanel from "../Pages/Admin/CustomerPanel";
 
 
 const mainRouter = createBrowserRouter([
@@ -84,6 +86,14 @@ const mainRouter = createBrowserRouter([
                     {
                         path:'add-product',
                         element: <AddProduct></AddProduct>
+                    },
+                    {
+                        path:'seller-panel',
+                        element: <SellerPanel></SellerPanel>
+                    },
+                    {
+                        path:'customer-panel',
+                        element: <CustomerPanel></CustomerPanel>
                     },
                 ]
             }
