@@ -1,0 +1,59 @@
+import { Link } from "react-router-dom";
+import SellerInformation from "../SellerDetails/SellerInformation"
+const SellerDetails = () => {
+    return (
+        <div>
+            {/* Banner */}
+            <div className="min-h-[60vh] bg-base-200 ">
+                <div className="ml-[10%] pt-[15%] ">
+                    {/* <img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" className="max-w-sm rounded-lg shadow-2xl" /> */}
+                    <div className="max-w-fit mx-auto flex flex-col justify-center items-center gap-3 ">
+                        <h1 className="text-5xl font-bold">Seller Brand Name</h1>
+                        <button className=" border-2 w-fit py-2 px-8 rounded-3xl text-lg font-semibold bg-blue-600 text-white hover:bg-blue-700"><Link to={"/my-website"}>View Website</Link></button>
+                    </div>
+                </div>
+            </div>
+
+            {/* Tab */}
+            <div role="tablist" className="tabs tabs-lifted tabs-lg mt-10  w-full ">
+                {/* Seller Information Tab*/}
+                <input type="radio" name="my_tabs_2" role="tab" className="tab [--tab-border-color:blue]" aria-label="Seller Information" defaultChecked/>
+                <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                    <SellerInformation></SellerInformation>
+                </div>
+                  
+                {/* Shop Information Tab*/}
+                <input
+                    type="radio"
+                    name="my_tabs_2"
+                    role="tab"
+                    className="tab  [--tab-border-color:blue]"
+                    aria-label="Shop Information"
+                     />
+                <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                    Tab content 2
+                </div>
+
+                  {/* Selling Details Tab*/}
+                <input type="radio" name="my_tabs_2" role="tab" className="tab  [--tab-border-color:blue]" aria-label="Selling Details" />
+                <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                    Tab content 3
+                </div>
+
+                {/* Business Revenue Tab*/}
+                <input type="radio" name="my_tabs_2" role="tab" className="tab  [--tab-border-color:blue]" aria-label="Business Revenue" />
+                <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                    Tab content 3
+                </div>
+
+                {/* Customers Feedback Tab*/}
+                <input type="radio" name="my_tabs_2" role="tab" className="tab  [--tab-border-color:blue]" aria-label="Customers Feedback" />
+                <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                    Tab content 3
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default SellerDetails;

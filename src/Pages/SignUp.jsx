@@ -11,7 +11,7 @@ import { useForm } from "react-hook-form";
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
 const SignUp = () => {
-    const { register, handleSubmit, reset } = useForm();
+    const { register, handleSubmit} = useForm();
 
     const { signUpWithEmailAndPassword, userUpdate} = useContext(AuthContext);
     const axiosPublic = useAxiosPublic()
@@ -71,6 +71,8 @@ const SignUp = () => {
                             const sellerInfo = {
                                 name: data.name,
                                 email: data.email,
+                                seller_country: data.sellerCountry,
+                                seller_address: data.sellerAddress,
                                 image: image,
                                 trade_license: [res2?.data?.data?.display_url],
                                 whatsapp_number: data.whatsappNumber,
@@ -113,7 +115,7 @@ const SignUp = () => {
     return (
         <div className="min-h-screen  w-full flex flex-row">
             <div className="flex-auto w-[40%]  bg-blue-100">
-                <img className=" h-full" src="https://i.ibb.co/BN1gwPM/loginn.png" alt="" />
+                <img className=" w-full " src="https://i.ibb.co/BN1gwPM/loginn.png" alt="" />
             </div>
             <div className="py-5 px-20 flex-auto w-[60%] bg-blue-100  ">
                 <h1 className=" text-3xl font-mono italic text-center font-extrabold mb-10 ">Super Box</h1>
@@ -170,6 +172,32 @@ const SignUp = () => {
                                 className="input input-bordered  " />
 
                         </div>
+                    </div>
+
+                    <div className="flex flex-row gap-4">
+                        {/* Country */}
+                        <div className="form-control flex-1 ">
+                            <label className="label">
+                                <span className="label-text text-lg">Country</span>
+
+                            </label>
+                            <input type="text" placeholder="Type your country name"
+                                {...register('sellerCountry', { required: true })}
+                                className="input input-bordered " />
+
+                        </div>
+                        {/* Address */}
+                        <div className="form-control flex-1 ">
+                            <label className="label">
+                                <span className="label-text text-lg">Address</span>
+
+                            </label>
+                            <input type="text" placeholder="please enter your full address"
+                                {...register('sellerAddress', { required: true })}
+                                className="input input-bordered " />
+
+                        </div>
+
                     </div>
 
                     {/*NID Number */}

@@ -1,4 +1,4 @@
-import { CgCross } from "react-icons/cg";
+
 import Title from "../../Components/Title";
 import { ImCross } from "react-icons/im";
 

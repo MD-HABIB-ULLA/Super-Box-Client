@@ -171,7 +171,7 @@ const SellerPanel = () => {
                             <th>8</th>
                             <td>Sammy Seston</td>
                             <td>Accountant I</td>
-                            <td>O'Hara, Welch and Keebler</td>
+                            <td>OHara, Welch and Keebler</td>
                             <td>Indonesia</td>
                             <td>5/23/2020</td>
                             <td>Crimson</td>
@@ -213,7 +213,7 @@ const SellerPanel = () => {
                             <td>Green</td>
                             <td>6/23/2020</td>
                             <td>Active</td>
-                            <td><Link className="text-blue-600 text-base underline">Show</Link>
+                            <td><Link to={'/dashboard/seller-details'} className="text-blue-600 text-base underline">Show</Link>
                             </td>
 
                             <td className=" flex flex-row items-center justify-center p-1 gap-1">
