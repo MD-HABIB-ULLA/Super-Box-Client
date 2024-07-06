@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import SellerInformation from "../SellerDetails/SellerInformation"
+import ShopInformation from "./ShopInformation";
 const SellerDetails = () => {
     return (
         <div>
@@ -15,10 +16,10 @@ const SellerDetails = () => {
             </div>
 
             {/* Tab */}
-            <div role="tablist" className="tabs tabs-lifted tabs-lg mt-10  w-full ">
+            <div role="tablist" className="tabs tabs-lifted tabs-lg mt-10  ">
                 {/* Seller Information Tab*/}
                 <input type="radio" name="my_tabs_2" role="tab" className="tab [--tab-border-color:blue]" aria-label="Seller Information" defaultChecked/>
-                <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                <div role="tabpanel" className="tab-content px-2">
                     <SellerInformation></SellerInformation>
                 </div>
                   
@@ -30,13 +31,13 @@ const SellerDetails = () => {
                     className="tab  [--tab-border-color:blue]"
                     aria-label="Shop Information"
                      />
-                <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
-                    Tab content 2
+                <div role="tabpanel" className="tab-content px-4">
+                 <ShopInformation></ShopInformation>
                 </div>
 
                   {/* Selling Details Tab*/}
                 <input type="radio" name="my_tabs_2" role="tab" className="tab  [--tab-border-color:blue]" aria-label="Selling Details" />
-                <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
+                <div role="tabpanel" className="tab-content px-2">
                     Tab content 3
                 </div>
 
