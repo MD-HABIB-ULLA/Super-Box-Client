@@ -96,7 +96,7 @@ const Dashboard = () => {
     return (
         <div className="">
             <Navbar></Navbar>
-            <div className=" grid grid-cols-1 md:grid-cols-12  gap-2">
+            <div className=" grid grid-cols-1 md:grid-cols-12 ">
                 {/* dashboard side bar */}
                 <div className="w-full md:col-span-4  lg:col-span-3 min-h-screen bg-blue-200">
                     <Link to="/dashboard/welcome-page" className="text-2xl font-semibold py-2 bg-gray-300 hover:bg-gray-500 hover:text-white flex items-center justify-center ">Dashboard</Link>

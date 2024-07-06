@@ -27,8 +27,9 @@ import SellerPanel from "../Pages/Admin/SellerPanel";
 import CustomerPanel from "../Pages/Admin/CustomerPanel";
 import AllProduct from "../Pages/Admin/AllProduct";
 import SellerRequests from "../Pages/Admin/SellerRequests";
-import SellingDetails from "../Pages/Admin/SellingDetails";
+import SellingDetails from "../Pages/Admin/SellerDetails/SellingDetails";
 import ReportsAndIssues from "../Pages/Admin/ReportsAndIssues";
+import SellerDetails from "../Pages/Admin/SellerDetails/SellerDetails";
 
 
 const mainRouter = createBrowserRouter([
@@ -115,6 +116,10 @@ const mainRouter = createBrowserRouter([
                     {
                         path:'report-issues',
                         element: <ReportsAndIssues></ReportsAndIssues>
+                    },
+                    {
+                        path:'seller-details',
+                        element: <SellerDetails></SellerDetails>
                     },
                 ]
             }
