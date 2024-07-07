@@ -3,6 +3,7 @@ import SellerInformation from "../SellerDetails/SellerInformation"
 import ShopInformation from "./ShopInformation";
 import SellingDetails from "./SellingDetails";
 import BusinessRevenue from "./BusinessRevenue/BusinessRevenue";
+import CustomerFeedBack from "./CustomerFeedback/CustomerFeedBack";
 const SellerDetails = () => {
     return (
         <div>
@@ -51,8 +52,8 @@ const SellerDetails = () => {
 
                 {/* Customers Feedback Tab*/}
                 <input type="radio" name="my_tabs_2" role="tab" className="tab  [--tab-border-color:blue]" aria-label="Customers Feedback" />
-                <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
-                    Tab content 3
+                <div role="tabpanel" className="tab-content px-2">
+                    <CustomerFeedBack></CustomerFeedBack>
                 </div>
             </div>
         </div>
