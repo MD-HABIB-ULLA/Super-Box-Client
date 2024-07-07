@@ -51,7 +51,7 @@ const Dashboard = () => {
     </>
     const adminNavLinks = <>
         <li className="menu p-0">
-            <details open>
+            <details>
                 <summary className="px-3 rounded-sm"><NavLink to="/dashboard/create-shop" className={` text-lg flex flex-row justify-between items-center gap-2`}>
                     <HiUserGroup className="text-3xl" />
                     All Users</NavLink></summary>
