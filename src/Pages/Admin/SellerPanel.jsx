@@ -55,8 +55,7 @@ const SellerPanel = () => {
 
                             <td className=" flex flex-row items-center justify-center p-1 gap-1">
                                 <button className="btn btn-outline btn-info  btn-xs ">Remove</button>
-                                <button className="btn btn-outline btn-error  btn-xs ">Ban</button>
-                                <button className="btn btn-outline btn-warning btn-xs " >Suspend</button>
+                                
                             </td>
                         </tr>
                         <tr>
@@ -73,8 +72,7 @@ const SellerPanel = () => {
 
                             <td className=" flex flex-row items-center justify-center p-1 gap-1">
                                 <button className="btn btn-outline btn-info  btn-xs ">Remove</button>
-                                <button className="btn btn-outline btn-error  btn-xs ">Ban</button>
-                                <button className="btn btn-outline btn-warning btn-xs " >Suspend</button>
+                                
                             </td>
                         </tr>
                         <tr>
@@ -91,8 +89,7 @@ const SellerPanel = () => {
 
                             <td className=" flex flex-row items-center justify-center p-1 gap-1">
                                 <button className="btn btn-outline btn-info  btn-xs ">Remove</button>
-                                <button className="btn btn-outline btn-error  btn-xs ">Ban</button>
-                                <button className="btn btn-outline btn-warning btn-xs " >Suspend</button>
+                                
                             </td>
                         </tr>
                         <tr>
@@ -109,8 +106,6 @@ const SellerPanel = () => {
 
                             <td className=" flex flex-row items-center justify-center p-1 gap-1">
                                 <button className="btn btn-outline btn-info  btn-xs ">Remove</button>
-                                <button className="btn btn-outline btn-error  btn-xs ">Ban</button>
-                                <button className="btn btn-outline btn-warning btn-xs " >Suspend</button>
                             </td>
                         </tr>
                         <tr>
@@ -127,8 +122,6 @@ const SellerPanel = () => {
 
                             <td className=" flex flex-row items-center justify-center p-1 gap-1">
                                 <button className="btn btn-outline btn-info  btn-xs ">Remove</button>
-                                <button className="btn btn-outline btn-error  btn-xs ">Ban</button>
-                                <button className="btn btn-outline btn-warning btn-xs " >Suspend</button>
                             </td>
                         </tr>
                         <tr>
@@ -145,8 +138,6 @@ const SellerPanel = () => {
 
                             <td className=" flex flex-row items-center justify-center p-1 gap-1">
                                 <button className="btn btn-outline btn-info  btn-xs ">Remove</button>
-                                <button className="btn btn-outline btn-error  btn-xs ">Ban</button>
-                                <button className="btn btn-outline btn-warning btn-xs " >Suspend</button>
                             </td>
                         </tr>
                         <tr>
@@ -163,8 +154,6 @@ const SellerPanel = () => {
 
                             <td className=" flex flex-row items-center justify-center p-1 gap-1">
                                 <button className="btn btn-outline btn-info  btn-xs ">Remove</button>
-                                <button className="btn btn-outline btn-error  btn-xs ">Ban</button>
-                                <button className="btn btn-outline btn-warning btn-xs " >Suspend</button>
                             </td>
                         </tr>
                         <tr>
@@ -181,8 +170,6 @@ const SellerPanel = () => {
 
                             <td className=" flex flex-row items-center justify-center p-1 gap-1">
                                 <button className="btn btn-outline btn-info  btn-xs ">Remove</button>
-                                <button className="btn btn-outline btn-error  btn-xs ">Ban</button>
-                                <button className="btn btn-outline btn-warning btn-xs " >Suspend</button>
                             </td>
                         </tr>
                         <tr>
@@ -199,8 +186,6 @@ const SellerPanel = () => {
 
                             <td className=" flex flex-row items-center justify-center p-1 gap-1">
                                 <button className="btn btn-outline btn-info  btn-xs ">Remove</button>
-                                <button className="btn btn-outline btn-error  btn-xs ">Ban</button>
-                                <button className="btn btn-outline btn-warning btn-xs " >Suspend</button>
                             </td>
                         </tr>
                         <tr>
@@ -218,8 +203,6 @@ const SellerPanel = () => {
 
                             <td className=" flex flex-row items-center justify-center p-1 gap-1">
                                 <button className="btn btn-outline btn-info  btn-xs ">Remove</button>
-                                <button className="btn btn-outline btn-error  btn-xs ">Ban</button>
-                                <button className="btn btn-outline btn-warning btn-xs " >Suspend</button>
                             </td>
                         </tr>
                     </tbody>
