@@ -12,6 +12,7 @@ import { FaRegQuestionCircle } from "react-icons/fa";
 
 const Dashboard = () => {
 
+    // eslint-disable-next-line no-unused-vars
     const sellerNavLinks = <>
         <li>
             <NavLink to="/dashboard/create-shop" className={`p-2 text-lg rounded-sm`}>
@@ -43,6 +44,12 @@ const Dashboard = () => {
             </NavLink>
         </li>
         <li>
+            <NavLink to="/dashboard/business-revenue" className={`p-2 text-lg rounded-sm`}>
+                <GrResources className="text-3xl" />
+                Business Revenue
+            </NavLink>
+        </li>
+        <li>
             <NavLink to="/dashboard/bm-resources" className={`p-2 text-lg rounded-sm`}>
                 <GrResources className="text-3xl" />
                 Business and Marketing Resources
@@ -52,7 +59,7 @@ const Dashboard = () => {
     const adminNavLinks = <>
         <li className="menu p-0">
             <details>
-                <summary className="px-3 rounded-sm"><NavLink to="/dashboard/create-shop" className={` text-lg flex flex-row justify-between items-center gap-2`}>
+                <summary className="px-3 rounded-sm"><NavLink to="/dashboard/welcome-page" className={` text-lg flex flex-row justify-between items-center gap-2`}>
                     <HiUserGroup className="text-3xl" />
                     All Users</NavLink></summary>
                 <ul className="text-lg">

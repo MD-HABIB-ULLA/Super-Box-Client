@@ -39,7 +39,7 @@ const SellerDetails = () => {
                 </div>
 
                   {/* Selling Details Tab*/}
-                <input type="radio" name="my_tabs_2" role="tab" className="tab  [--tab-border-color:blue]" aria-label="Selling Details" />
+                <input type="radio" name="my_tabs_2" role="tab" className="tab  [--tab-border-color:blue]" aria-label="Products" />
                 <div role="tabpanel" className="tab-content px-2">
                     <SellingDetails></SellingDetails>
                 </div>
