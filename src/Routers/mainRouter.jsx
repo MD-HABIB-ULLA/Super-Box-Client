@@ -30,6 +30,8 @@ import SellerRequests from "../Pages/Admin/SellerRequests";
 import SellingDetails from "../Pages/Admin/SellerDetails/SellingDetails";
 import ReportsAndIssues from "../Pages/Admin/ReportsAndIssues";
 import SellerDetails from "../Pages/Admin/SellerDetails/SellerDetails";
+import BusinessRevenue from "../Pages/Admin/SellerDetails/BusinessRevenue/BusinessRevenue";
+import EditProfile from "../Pages/Customer/EditProfile";
 
 
 const mainRouter = createBrowserRouter([
@@ -91,6 +93,10 @@ const mainRouter = createBrowserRouter([
                     {
                         path:'add-product',
                         element: <AddProduct></AddProduct>
+                    },
+                    {
+                        path:'business-revenue',
+                        element: <BusinessRevenue></BusinessRevenue>
                     },
                     // Admin Routes
                     {
@@ -161,6 +167,10 @@ const mainRouter = createBrowserRouter([
                 path:'edit-website',
                 element: <EditWebsite></EditWebsite>
             },
+            {
+                path:'edit-profile',
+                element: <EditProfile></EditProfile>
+            }
         ]
     },
 ])

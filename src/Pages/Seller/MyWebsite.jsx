@@ -3,7 +3,7 @@ import Navbar2 from "./Components2/Navbar2";
 
 const MyWebsite = () => {
     return (
-        <div>
+        <div >
             <Navbar2></Navbar2>
             <Outlet></Outlet>
         </div>
