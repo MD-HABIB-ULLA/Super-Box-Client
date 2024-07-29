@@ -3,8 +3,12 @@ import { Link } from "react-router-dom";
 
 const Banner = () => {
     return (
-        <div className="hero min-h-[70vh] bg-base-200">
-            <div className="hero-content flex-col lg:flex-row">
+        <div className="hero min-h-[70vh] bg-base-200"
+        style={{
+            backgroundImage: "url(https://i.ibb.co/2qS4pZN/futuristic-global-network-tacit-digital-data-transfer-3d-graphic-31965-248660-1.jpg)",
+          }}>
+            <div className="hero-overlay bg-opacity-60"></div>
+            <div className="hero-content flex-col lg:flex-row text-neutral-content">
                 {/* <img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" className="max-w-sm rounded-lg shadow-2xl" /> */}
                 <div className="max-w-[70%] mr-auto">
                     <h1 className="text-5xl font-bold">Super Box</h1>
