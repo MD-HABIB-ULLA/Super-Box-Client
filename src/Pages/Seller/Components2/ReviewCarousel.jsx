@@ -3,7 +3,7 @@ import Title from "../../../Components/Title";
 
 const ReviewCarousel = () => {
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto my-10">
             <Title title1={''} title2={'Customer Review'}></Title>
             <div className="carousel  w-full my-10">
                 <div id="slide1" className="carousel-item relative w-full h-max ">

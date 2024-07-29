@@ -5,6 +5,7 @@ import FollowUs2 from "../Components2/FollowUs2";
 import Footer2 from "../Components2/Footer2";
 import PopularProducts from "../Components2/PopularProducts";
 import ReviewCarousel from "../Components2/ReviewCarousel";
+import ShopOverview from "./ShopOverview";
 
 
 const LandingPage2 = () => {
@@ -22,9 +23,10 @@ const LandingPage2 = () => {
                     </div>
                     <div className=' flex-1 bg-gray-300 rounded-r-3xl'></div>
                 </div>
-            </div>
+            </div>  
+            <ShopOverview></ShopOverview>
             <ReviewCarousel></ReviewCarousel>
-
+           
             <Footer2></Footer2>
         </div>
     );

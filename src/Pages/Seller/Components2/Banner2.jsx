@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
-
+import sellerBanner from '../../../assets/sellerBanner.jpg'
 
 const Banner2 = () => {
     return (
-        <div className="min-h-[70vh] bg-base-200">
-            <div className="ml-[10%] pt-[8%] ">
-                {/* <img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" className="max-w-sm rounded-lg shadow-2xl" /> */}
+        <div className="hero min-h-[70vh] bg-cover"
+        style={{
+            backgroundImage: "url(https://i.ibb.co/DQk816R/shopping-people-composition-with-collage-flat-cart-smartphone-credit-card-icons-with-human-character.jpg)",
+          }}>
+            <div className="hero-overlay bg-opacity-60"></div>
+            <div className=" hero-content text-neutral-content ">
                 <div className="max-w-[70%] ">
                     <h1 className="text-5xl font-bold">Brand Name</h1>
                     <p className="py-6 max-w-[70%]">In the banner you can show discounts and offers, new launched products new launched products</p>
