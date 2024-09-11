@@ -11,7 +11,7 @@ const EditProfile = () => {
             <div className="bg-gray-200 mt-5  py-10">
                 <form className="w-[50%] mx-auto flex flex-col justify-center  gap-2">
                     <div className="flex flex-row gap-2 items-center">
-                        <h1 className="text-xl">Your Name: </h1>
+                        <h1 className="text-xl">Your Name:  </h1>
                         <input type="text" placeholder="Type here" className="input w-full max-w-sm" />
                     </div>
                     <div className="flex flex-row gap-2 items-center">
